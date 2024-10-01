@@ -5,6 +5,7 @@ import numpy as np
 import cv2
 import uuid
 import os
+import glob  # New import to handle file patterns
 
 from model import U2NET
 from torch.autograd import Variable
@@ -60,7 +61,8 @@ def removeBg(imagePath):
         return "---Empty image---"
 
     # save image to inputs
-    unique_filename = str(uuid.uuid4())
+    # unique_filename = str(uuid.uuid4())
+    unique_filename = os.path.basename(imagePath).split('.')[0]
     cv2.imwrite(inputs_dir+unique_filename+'.jpg', img)
 
     # processing
@@ -109,5 +111,13 @@ else:
 
 print("---Removing Background...")
 # ------- Call The removeBg Function --------
-imgPath = "Image_File_Path"  # Change this to your image path
-print(removeBg(imgPath))
+# imgPath = "/home/mohammed/Pictures/JD2007_1.jpg"  # Change this to your image path
+# print(removeBg(imgPath))
+
+
+# ------- Loop through all JPG files in the directory --------
+img_directory = "/home/mohammed/Pictures/Ajwa/"
+for imgPath in glob.glob(os.path.join(img_directory, "*.jpg")):
+    print(f"Processing: {imgPath}")
+    # ------- Call The removeBg Function --------
+    print(removeBg(imgPath))
