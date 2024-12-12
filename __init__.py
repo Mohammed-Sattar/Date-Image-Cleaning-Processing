@@ -1,3 +1,11 @@
+"""
+__init__.py
+
+This module initializes the Image Background Remover package. It imports necessary libraries, 
+loads the pre-trained U2NET model, and defines the removeBg function to process images by 
+removing their backgrounds. The function generates a mask and final results for the input image.
+"""
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -116,7 +124,7 @@ print("---Removing Background...")
 
 
 # ------- Loop through all JPG files in the directory --------
-img_directory = "/home/mohammed/Pictures/Ajwa/"
+img_directory = r"/home/mohammed/Documents/Hackathon Work/Code/ImageBackgroundRemover/static/palms_trees_input/"
 for imgPath in glob.glob(os.path.join(img_directory, "*.jpg")):
     print(f"Processing: {imgPath}")
     # ------- Call The removeBg Function --------

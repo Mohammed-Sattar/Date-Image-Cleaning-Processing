@@ -1,20 +1,11 @@
-# import os
-# import glob  # New import to handle file patterns
-# from skimage import io
+"""
+image_matrix.py
 
-# img_directory = "/home/mohammed/Pictures/Ajwa/"
-# for imgPath in glob.glob(os.path.join(img_directory, "*.jpg")):
-#     print(f"Processing: {imgPath}")
-#     image = io.imread(imgPath)
-    
-#     # Find values below 150
-#     below_150 = image[image < 150]
-    
-#     # Print the matrices with values below 150
-#     print("Pixel values below 150:")
-#     print(below_150)
-    
-#     break
+This module processes images to find and print pixel values below a specified threshold. 
+It loads images from a directory, applies a condition to extract pixel values, and 
+saves the results to a text file. This functionality is useful for analyzing image 
+data and understanding pixel distributions.
+"""
 
 
 import os

@@ -1,3 +1,12 @@
+"""
+data_loader.py
+
+This module defines classes for loading and transforming image datasets. It includes 
+RescaleT, RandomCrop, ToTensor, and SalObjDataset classes, which are used to preprocess 
+images for the background removal model. The transformations ensure that the images are 
+in the correct format and size for effective processing.
+"""
+
 # data loader
 from __future__ import print_function, division
 import glob

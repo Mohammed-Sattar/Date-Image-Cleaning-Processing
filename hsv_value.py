@@ -1,3 +1,12 @@
+"""
+hsv_value.py
+
+This module analyzes the HSV values of an image to identify dark areas. It reads an 
+image, converts it to the HSV color space, and creates a mask for dark regions. 
+This analysis is useful for isolating specific features in the image for further 
+processing.
+"""
+
 import cv2
 import numpy as np
 

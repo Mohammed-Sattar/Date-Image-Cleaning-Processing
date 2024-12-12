@@ -1,3 +1,12 @@
+"""
+extract_date.py
+
+This module isolates the date from an image using color masking techniques. It reads 
+an image, converts it to the HSV color space, and creates a mask for dark colors. 
+Morphological operations and contour finding techniques are applied to extract the date 
+from the image.
+"""
+
 import cv2
 import numpy as np
 

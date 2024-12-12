@@ -1,3 +1,11 @@
+"""
+heic_rename.py
+
+This script renames all HEIC files in a specified directory to a standardized format. 
+It retrieves all HEIC files, sorts them, and renames them sequentially to ensure 
+consistent naming for easier management and processing.
+"""
+
 import os
 
 def rename_heic_files(directory):
