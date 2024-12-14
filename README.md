@@ -42,7 +42,10 @@ The process employs the Canny edge detection algorithm and watershed segmentatio
 A Jupyter Notebook used for visualizing image histograms, allowing me to analyze the distribution of pixel values in images. I used it to find the optimal threshold for separating the date from the background.
 
 ## Usage
-To use the Image Background Remover, ensure that you have the necessary dependencies installed and run the app.py script. You can also explore the Jupyter Notebooks for detailed demonstrations of specific functionalities.
+To use the Image Background Remover, ensure that you have the necessary dependencies installed. You must also the model.pth file saved in the `saved_models/u2net/` directory. To know more about this visit the original repository. Then run the app.py script. You can also explore the Jupyter Notebooks for detailed demonstrations of specific functionalities.
+
+## Acknowledgements
+This project utilizes the pretrained U2NET model for background removal. The code for background removal is based on the [Image-Background-Remover-Python](https://github.com/hassancs91/Image-Background-Remover-Python) repository. For more details on how the model was implemented, please refer to the original repository.
 
 ## Installation
 1. Clone the repository: `git clone https://github.com/Mohammed-Abdulrahman/ImageBackgroundRemover.git`
